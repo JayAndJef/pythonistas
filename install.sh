@@ -28,10 +28,35 @@ else
     exit 1
 fi
 
-# create folder
+# create folder, clone repo
+
+echo "Creating directory and installing libraries..."
+
+Path=${1:-pythonistas/}
+echo "Cloning Git Repo at $Path..."
+git clone -q https://github.com/JayAndJef/pythonistas "$Path"
 
 # create venv in folder and install libraries
 
+cd "$Path"
+$PY -m venv venv
+
+echo "Creating venv..."
+
+if source venv/bin/activate
+then 
+    echo "Unix shell detected: venv/bin/activate"
+elif .\venv\Scripts\Activate.ps1
+then
+    echo "Powershell detected: this install might be unstable"
+else
+    echo "Could not install libraries!"
+    exit 1
+fi
+echo "Installing required dependancies..."
+
+pip install -r requirements.txt
+
 # welcome message
 
-echo "Installation done! Open the directory 'pythonistas' in a code editor to get started!"
+echo "Installation done! Open the directory 'pythonistas' in a code editor and activate the venv to get started!"
