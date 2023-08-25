@@ -38,7 +38,7 @@ Run `python -m manage check <section_number> <exercise_number>` in your shell to
  * What the unequal values were.
 
 For example:
-```
+```py
 ___________________________________________________________ test_x ___________________________________________________________
 
     def test_x():
