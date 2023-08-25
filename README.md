@@ -3,9 +3,9 @@ Short python exercises to get you familiar with programming - inspired by rustli
 
 This book is supposed to go along with "A Byte of Python". The ebook version can be found [here](https://python.swaroopch.com/).
 
-## Mac
+## Mac/Linux
 
-To get started, run `curl -L https://raw.githubusercontent.com/JayAndJef/pythonistas/main/install.sh | bash`
+To get started, run ```curl -L https://raw.githubusercontent.com/JayAndJef/pythonistas/main/install.sh | bash```
 
 If there is an error, it is most likely that the program cannot find python or git on your system
 
