@@ -5,7 +5,7 @@ def get_file_path(section: int, exercise: int) -> Path:
     for section_path in path.iterdir():
         if str(section) in str(section_path):
             for exercise_file in section_path.iterdir():
-                if str(exercise) in str(exercise_file):
+                if str(exercise) in str(exercise_file.stem):
                     return exercise_file
     raise FileNotFoundError("cannot find exercise!")
 
