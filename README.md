@@ -20,7 +20,13 @@ Windows support is not full yet. Either extract install.sh and run it, or clone 
 
 ## Troubleshooting
 
-if the CLI does not run and gives an error, double check that your current working directory is in `pythonistas`. The CLI will also remind you of this.
+if the CLI does not run and gives an error, double check that your current working directory is in `pythonistas`.
+
+if the CLI gives an error saying `<some_library> is not found`, then you might have switched terminals, resulting in venv deactivation. 'cd' into `pythonistas` and run the following command if you are on unix:
+```
+source venv/bin/activate
+```
+if you are on windows, refer to [this guide](https://docs.python.org/3/library/venv.html#how-venvs-work)
 
 ## Exercise structure
 
